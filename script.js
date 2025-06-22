@@ -12,7 +12,7 @@ VANTA.NET({
   points: 12.00,
   maxDistance: 22.00,
   spacing: 18.00
-})
+});
 
 const form = document.getElementById('contact-form');
 const formContainer = document.getElementById('contact-form-container');
