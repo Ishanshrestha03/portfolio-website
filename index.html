@@ -27,12 +27,21 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </header>
 
     <section class="hero">
       <div class="hero-text">
         <h1 data-aos="fade-up">Hi, I am Ishan Shrestha</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Act out being alive, like a play. And after a while, a long while, it will be true.</p>
+        <p id="philosophical-quote" data-aos="fade-up" data-aos-delay="100"></p>
+      </div>
+      <div class="scroll-down">
+        <span>Scroll Down</span>
+        <div class="arrow-down"></div>
       </div>
     </section>
 
@@ -41,7 +50,7 @@
         <h2>About Me</h2>
         <p>
           Analytical and detail-oriented Computer Science student seeking an
-          internship to leverage strong programming, data analysis, and
+          opportunity to leverage strong programming, data analysis, and
           problem-solving skills. Skilled in extracting insights from data to
           drive strategic decision-making and enhance operational efficiency.
           Eager to contribute to a dynamic team and gain hands-on experience in
@@ -110,22 +119,22 @@
       </section>
 
       <section id="contact" data-aos="fade-up">
-        <h2>Contact Me</h2>
-        <p>
-          You can reach me at
-          <a href="mailto:eexanstha3@gmail.com">eexanstha3@gmail.com</a>
-        </p>
+        <p class="section-subtitle">Get in touch</p>
+        <h2>Contact</h2>
         <div id="contact-form-container">
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="c5b9689d-a4c7-466a-a6d7-44ffcca949da">
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-              ></textarea>
-              <button type="submit" class="btn">Send Message</button>
+              
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" placeholder="What's your email?" required />
+
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="What's your message?" required></textarea> 
+              
+              <button type="submit" class="btn">Send</button>
             </form>
         </div>
         <div id="form-success-message" style="display: none;">
