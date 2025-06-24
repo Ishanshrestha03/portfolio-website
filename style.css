@@ -23,10 +23,6 @@ body {
 }
 
 header {
-    background-color: var(--header-bg-color);
-    backdrop-filter: blur(10px);
-    color: #fff;
-    padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,6 +30,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--header-bg-color);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 1rem 2rem;
+    gap: 1.2rem;
 }
 
 nav {
@@ -90,7 +91,7 @@ nav a:hover {
 
 .hero-text p {
     font-size: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 main {
@@ -98,6 +99,7 @@ main {
 }
 
 section {
+    scroll-margin-top: 5rem;
     margin-bottom: 2rem;
     padding: 2rem;
     background-color: var(--section-bg-color);
@@ -342,5 +344,80 @@ button.btn {
   }
   60% {
     transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scared.ripple {
+  animation: ripple 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.excited.ripple {
+  animation: ripple 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.linkedin-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 1.2rem;
+  transition: transform 0.2s;
+  z-index: 1100;
+  flex-shrink: 0;
+}
+
+.linkedin-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.15) rotate(-8deg);
+  filter: drop-shadow(0 0 8px #0077B588);
+}
+
+.spotify-icon {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .linkedin-icon {
+    margin-left: 0.5rem;
+  }
+  .spotify-icon {
+    margin-left: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .linkedin-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .linkedin-icon {
+    margin-left: 0.2rem;
   }
 } 

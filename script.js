@@ -20,9 +20,28 @@ const quotes = [
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const quoteElement = document.getElementById('philosophical-quote');
-  if (quoteElement) {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    quoteElement.textContent = quotes[randomIndex];
+  const logo = document.querySelector('.logo a');
+
+  function refreshQuote(e) {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (quoteElement) {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteElement.textContent = quotes[randomIndex];
+      }
+    }
+  }
+
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+      if (quoteElement) {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteElement.textContent = quotes[randomIndex];
+      }
+  }
+
+  if(logo) {
+    logo.addEventListener('click', refreshQuote);
   }
   
   const form = document.getElementById('contact-form');
@@ -76,4 +95,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("nav-active");
   }));
+
+  const excitedH1 = document.querySelector('h1.excited');
+  if (excitedH1) {
+    const fullText = "Hi, I'm Ishan";
+    let typingTimeout = null;
+    let typingInterval = null;
+    function startTyping() {
+      if (typingTimeout) clearTimeout(typingTimeout);
+      excitedH1.textContent = '';
+      let i = 0;
+      function typeChar() {
+        if (document.hidden) return; // Don't type if tab is hidden
+        if (i < fullText.length) {
+          excitedH1.textContent += fullText.charAt(i);
+          i++;
+          typingTimeout = setTimeout(typeChar, 70);
+        }
+      }
+      typeChar();
+    }
+    startTyping();
+    typingInterval = setInterval(() => {
+      if (!document.hidden) startTyping();
+    }, 5000);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (typingTimeout) clearTimeout(typingTimeout);
+      } else {
+        startTyping();
+      }
+    });
+  }
+
+  const arrowDown = document.querySelector('.arrow-down');
+  if (arrowDown) {
+    arrowDown.style.cursor = 'pointer';
+    arrowDown.addEventListener('click', () => {
+      window.scrollBy({
+        top: window.innerHeight * 0.85,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });

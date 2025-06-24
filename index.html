@@ -6,6 +6,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ishan Shrestha - Portfolio</title>
+    <meta name="description" content="Portfolio of Ishan Shrestha, a Computer Science student and developer.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ishanshaportfolio.netlify.app/">
+    <meta property="og:title" content="Ishan Shrestha - Portfolio">
+    <meta property="og:description" content="Portfolio of Ishan Shrestha, a Computer Science student and developer.">
+    <!-- <meta property="og:image" content="URL_to_a_preview_image.jpg"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ishanshaportfolio.netlify.app/">
+    <meta property="twitter:title" content="Ishan Shrestha - Portfolio">
+    <meta property="twitter:description" content="Portfolio of Ishan Shrestha, a Computer Science student and developer.">
+    <!-- <meta property="twitter:image" content="URL_to_a_preview_image.jpg"> -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -23,7 +38,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#resume">Resume</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -32,11 +47,23 @@
         <div class="line"></div>
         <div class="line"></div>
       </div>
+      <a href="https://www.linkedin.com/in/ishanshrestha03" class="linkedin-icon" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <svg width="28" height="28" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="448" height="448" rx="90" fill="#0077B5"/>
+          <path d="M120.9 170.7h-56.1v181.5h56.1V170.7zm-28.1-28.1c18 0 29-12 29-27-0.3-15.3-11-27-28.7-27-17.7 0-29 11.7-29 27 0 15 11 27 28.4 27zm57.1 28.1h53.8v24.8h0.8c7.5-13.2 25.8-27 53.1-27 56.8 0 67.3 37.4 67.3 86v97.7h-56.1v-86.6c0-20.7-0.4-47.3-28.8-47.3-28.8 0-33.2 22.5-33.2 45.8v88.1h-56.1V170.7z" fill="#fff"/>
+        </svg>
+      </a>
+      <a href="https://open.spotify.com/user/m7a7veif40llmd0ifv6thgyxh?si=1ae022fa281d4483" class="spotify-icon" target="_blank" rel="noopener" aria-label="Spotify Profile">
+        <svg width="28" height="28" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="84" cy="84" r="84" fill="#1DB954"/>
+          <path d="M122.1 115.2c-1.8 2.9-5.6 3.8-8.5 2-23.3-14.3-52.7-17.5-87.4-9.5-3.3 0.7-6.6-1.3-7.3-4.6-0.7-3.3 1.3-6.6 4.6-7.3 37.2-8.4 69.2-4.7 95.1 10.9 2.9 1.7 3.8 5.5 2 8.5zm11.9-23.7c-2.2 3.5-6.8 4.6-10.3 2.4-26.7-16.4-67.5-21.2-99.1-11.5-4 1.2-8.2-1.1-9.4-5.1-1.2-4 1.1-8.2 5.1-9.4 35.2-10.7 79.2-5.6 109.6 13.1 3.5 2.2 4.6 6.8 2.4 10.5zm12.1-25.1c-31.1-18.3-82.5-20-112.1-10.8-4.6 1.4-9.5-1.2-10.9-5.8-1.4-4.6 1.2-9.5 5.8-10.9 33.2-10.1 88.2-8.2 123.2 12.1 4.1 2.4 5.4 7.7 3 11.8-2.3 4.1-7.6 5.4-11.8 3.6z" fill="#fff"/>
+        </svg>
+      </a>
     </header>
 
     <section class="hero">
       <div class="hero-text">
-        <h1 data-aos="fade-up">Hi, I am Ishan Shrestha</h1>
+        <h1 data-aos="fade-up" class = "excited">Hi, I'm Ishan</h1>
         <p id="philosophical-quote" data-aos="fade-up" data-aos-delay="100"></p>
       </div>
       <div class="scroll-down">
@@ -48,7 +75,7 @@
     <main>
       <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>
+        <p class ="project-card">
           Analytical and detail-oriented Computer Science student seeking an
           opportunity to leverage strong programming, data analysis, and
           problem-solving skills. Skilled in extracting insights from data to
@@ -84,7 +111,7 @@
             </ul>
           </div>
           <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Lego</h3>
+            <h3>LEGO</h3>
             <p>
               <strong>Technologies:</strong> HTML, CSS, JavaScript, PHP,
               Node.js, MySQL
@@ -109,13 +136,8 @@
 
       <section id="resume" data-aos="fade-up">
         <h2>My Resume</h2>
-        <p>You can view and download my resume by clicking the button below.</p>
-        <a
-          href="IshanResume.pdf"
-          class="btn"
-          target="_blank"
-          >Download Resume</a
-        >
+        <p class ="project-card">You can view my full resume on a dedicated page by clicking the button below.</p>
+        <a href="resume.html" class="btn">Click here to view my resume</a>
       </section>
 
       <section id="contact" data-aos="fade-up">
@@ -143,6 +165,10 @@
         </div>
       </section>
     </main>
+
+    <footer>
+      <p>© 2025 Ishan Shrestha</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
