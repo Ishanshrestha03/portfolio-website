@@ -420,4 +420,77 @@ footer {
   .linkedin-icon {
     margin-left: 0.2rem;
   }
+}
+
+/* Support/Donation Section Styles */
+.support-content {
+  text-align: center;
+}
+
+.coffee-button-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff813f 0%, #ff6b6b 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(255, 129, 63, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.coffee-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 129, 63, 0.4);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff813f 100%);
+}
+
+.coffee-btn:active {
+  transform: translateY(0);
+}
+
+.coffee-icon {
+  transition: transform 0.3s ease;
+}
+
+.coffee-btn:hover .coffee-icon {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.support-message {
+  font-size: 1rem;
+  color: #a0a0a0;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments for support section */
+@media (max-width: 768px) {
+  .coffee-btn {
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    gap: 0.6rem;
+  }
+  
+  .coffee-icon {
+    width: 20px;
+    height: 20px;
+  }
 } 
